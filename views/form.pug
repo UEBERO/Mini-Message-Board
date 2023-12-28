@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= 'Message Form'
+
+  form(action="/new" method="post")
+      label(for="messageUser") messageUser:
+      input(type="text" id="messageUser" name="messageUser" required)
+
+      label(for="messageText") Message:
+      textarea(id="messageText" name="messageText" rows="4" required)
+      //- Sends request via POST
+
+      
+      button(type="submit" id="send") Send

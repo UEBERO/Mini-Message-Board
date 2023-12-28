@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title 
+
+    // Agrega el botón para redirigir a /new
+  a(href="/new" class="btn btn-primary") Go to New Page
+
+  ul 
+    each message in messages 
+      p= message.text
+      p= `User: ${message.user}` 
+      p= `Added: ${message.added}`
